@@ -119,6 +119,8 @@ function Run() {
                 Output("I don't need this server anymore, so I'll throw it away.");
                 cash.innerText = "Cash : " + myCash;
             }
+        }else{
+            error();
         }
     } else {
         if (serverLoad == 0) {
