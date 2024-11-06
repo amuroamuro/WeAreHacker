@@ -77,7 +77,7 @@ function Run() {
                 if (key == numberN) {
                     crashing = true;
                     crashingKey = false;
-                    Output("Enter your level now");
+                    Output("Write down your current level");
                 } else {
                     Output("It's not password");
                 }
