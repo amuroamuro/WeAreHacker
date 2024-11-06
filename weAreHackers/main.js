@@ -46,26 +46,26 @@ function newKey() {
 
 function Run() {
     commend = typeCode.value;
-    
+
     // 서버가 활성화 된 경우
     if (server) {
         if (commend == "level") {
             Output(level.toString());
         } else if (commend == "crash") {
-            // Level이 1보다 클 때만 crash 명령어 처리
+            // level이 1 이상일 때만 crash 명령어 실행
             if (level > 1) {
                 crashingKey = true;
                 crash = 0;
                 newKey();
                 Output("Write down password.");
             } else {
-                // Level이 1이면 crash 명령어를 사용할 수 없음
-                error();  // 에러 처리
+                // level이 1이면 crash 명령어를 사용할 수 없고, 에러 처리
+                error();
             }
         } else if (crashingKey) {
             numberN = Number(commend);
-            
-            // 숫자 값이 아닌 경우, password 입력을 대기
+
+            // 비밀번호 입력 처리
             if (isNaN(numberN)) {
                 if (commend == "password") {
                     Output(key.toString());
@@ -84,7 +84,8 @@ function Run() {
             }
         } else if (crashing) {
             numberN = Number(commend);
-            
+
+            // level을 입력받고 비교 처리
             if (isNaN(numberN)) {
                 if (commend == "level") {
                     Output(level.toString());
@@ -128,7 +129,7 @@ function Run() {
             }
         } else if (serverLoad == 1) {
             numberN = Number(commend);
-            
+
             if (isNaN(numberN)) {
                 error();
             } else {
@@ -158,3 +159,4 @@ typeCode.addEventListener("keydown", function(event) {
 });
 
 run.addEventListener("click", Run);
+
