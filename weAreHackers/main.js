@@ -95,7 +95,7 @@ function Run() {
             } else {
                 crash = numberN;
                 if (level == numberN) {
-                    level -= 1;
+                    level = level-1;
                     crashing = false;
                     crashingKey = false;
                     Output("Complete!");
