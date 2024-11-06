@@ -58,7 +58,7 @@ function Run() {
                 crash = 0;
                 newKey();
                 Output("Write down password.");
-            } else {
+            }else {
                 // level이 1이면 crash 명령어를 사용할 수 없고, 에러 처리
                 error();
             }
