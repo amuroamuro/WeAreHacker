@@ -51,7 +51,7 @@ function Run() {
         if(commend=="level"){
             Output(level.toString());
         }else if(commend=="crash"){
-            if(!level==1){
+            if(level==1){
                 crashingKey = true;
                 crash = 0;
                 newKey();
