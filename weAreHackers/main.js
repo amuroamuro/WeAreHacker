@@ -104,7 +104,7 @@ function Run() {
                     Output("This is not this level");
                 }
             }
-        } else if (level == 1) {
+        }else if (level == 1) {
             if (commend == "hack") {
                 hackingTool = true;
                 Output("We planted a hacking tool!!");
