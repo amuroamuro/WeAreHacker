@@ -99,7 +99,7 @@ function Run() {
                     level -= 1; // 레벨 1 감소
                     crashing = false;
                     crashingKey = false;
-                    Output("Complete! Level decreased. Your new level is: " + level);
+                    Output("Complete!");
                 } else {
                     Output("This is not this level");
                 }
