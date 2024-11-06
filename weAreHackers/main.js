@@ -95,10 +95,11 @@ function Run() {
             } else {
                 crash = numberN;
                 if (level == numberN) {
-                    level = level-1;
+                    // `crash` 완료 후 레벨 1 감소
+                    level -= 1; // 레벨 1 감소
                     crashing = false;
                     crashingKey = false;
-                    Output("Complete!");
+                    Output("Complete! Level decreased. Your new level is: " + level);
                 } else {
                     Output("This is not this level");
                 }
@@ -160,4 +161,3 @@ typeCode.addEventListener("keydown", function(event) {
 });
 
 run.addEventListener("click", Run);
-
